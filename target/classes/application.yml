@@ -1,0 +1,35 @@
+quarkus:
+  log:
+    category:
+      "org.quiz":
+        level: DEBUG
+
+  http:
+    port: 8080
+    cors:
+      ~: true
+      methods: GET, POST, PUT
+
+  datasource:
+    db-kind: mysql
+    jdbc:
+      url: jdbc:mysql://localhost:3306/quiz
+    username: root
+    password: password
+
+  hibernate-orm:
+    log:
+      sql: true
+    database:
+      generation: update
+
+  smallrye-openapi:
+    info-title: Quiz App Web Services
+    info-version: 1.0
+    info-description: API for creating and retrieving players
+    info-contact-email: sahit.berisha11@gmail.com
+    info-contact-name: Quiz App Support
+
+  swagger-ui:
+    enable: true
+    path: /swagger
