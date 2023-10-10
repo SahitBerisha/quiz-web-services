@@ -14,6 +14,8 @@ To run this project, you will need to change the following environment variables
 
 
 #### Build & Run Docker containers
+`cd quiz-web-services`
+
 `./gradlew clean build`
 
 `docker-compose up --build -d`
